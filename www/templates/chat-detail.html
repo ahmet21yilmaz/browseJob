@@ -1,0 +1,58 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<!--
+<ion-view view-title="{{classDetail.title}}">
+  <ion-content class="padding">
+    <img ng-src="{{classDetail.image}}" style="width: 64px; height: 64px">
+    <p>
+      {{classDetail.price}}
+    </p>
+  </ion-content>
+</ion-view>
+-->
+<ion-view view-title="{{classDetail.title}}">
+  <ion-content class="padding">
+    <div class ="list card">
+
+       <div class =" item item-divider text-center">
+          <h1>{{classDetail.title}}</h1>
+       </div>
+
+       <div class="item item-body">
+         <p>
+            <div class="text-center">
+             <img ng-src="{{classDetail.image}}" style="width: 250px; height: 200px;border:2px;">
+            </div>
+
+            <div class="text-center">
+               <h2>Booking Price:{{classDetail.price}}</h2>
+            </div>
+            <div class="buttons text-center padding">
+            <button class="button button-large button-assertive ion-ios-star" ng-click="addToFavClass()">
+              Add To My Favourites
+            </button>
+          </div>
+
+         </p>
+       </div>
+
+      <div class="text-center">
+            <p>
+              <h4>Description</h4>
+              {{classDetail.description}}
+            </p>
+      </div>
+  </div>
+  <!--
+  <div class="buttons text-center">
+  <button class="button button-large button-calm ion-ios-star" ng-click="addToFavClass()">
+    Add To Favourites
+  </button>
+</div>
+-->
+  </ion-content>
+</ion-view>
